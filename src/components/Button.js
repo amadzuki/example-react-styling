@@ -1,18 +1,31 @@
 import React from "react"
 import styled, { css } from "@xstyled/styled-components"
+import { variant } from "@xstyled/system"
 
 const ButtonContainer = styled.button`
   background: transparent;
   border-radius: 11;
   border: 2;
-  border-color: primary;
   margin: 0 3;
   padding: 1 3;
-  color: primary;
+  font-size: 1.2em;
+  ${variant({
+    default: "primary",
+    variants: {
+      primary: css`
+        color: primary;
+        border-color: primary;
+      `,
+      secondary: css`
+        color: secondary;
+        border-color: secondary;
+      `,
+    },
+  })}
 `
 
-const Button = ({ color, children }) => {
-  return <ButtonContainer color={color}>{children}</ButtonContainer>
+const Button = ({ variant, children }) => {
+  return <ButtonContainer variant={variant}>{children}</ButtonContainer>
 }
 
 export default Button

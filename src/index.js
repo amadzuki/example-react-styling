@@ -8,7 +8,12 @@ import * as serviceWorker from "./serviceWorker"
 
 const theme = {
   colors: {
-    primary: "tomato",
+    primary: "#ff6b6b",
+    secondary: "#f06595",
+    info: "#1971c2",
+    bgInfo: "#a5d8ff",
+    error: "#e03131",
+    bgError: "#ffc9c9",
   },
 }
 
